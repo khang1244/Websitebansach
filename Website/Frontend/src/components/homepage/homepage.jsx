@@ -1,5 +1,7 @@
 
 import Navigation from "../Navigation";
+import Banner from "../Banner";
+
 function Homepage() {
   return (
     <div>
@@ -7,9 +9,7 @@ function Homepage() {
       <Navigation />
 
       {/* Banner - Banner */}
-      <div className="px-10 py-10 w-full h-[300px] bg-blue-500 text-white flex justify-center items-center">
-        <h2>Chào mừng đến với trang web của chúng tôi!</h2>
-      </div>
+      <Banner />
 
       {/* Danh mục - Categories */}
       <div className="px-10 py-10 bg-green-500 w-full ">
