@@ -11,14 +11,15 @@ function Banner() {
     }, 3000); // đổi slide mỗi 3s
     return () => clearInterval(interval);
   }, [currentIndex]);
-
+    
+//  chuyển về sidle phía trước
   const goToPrev = () => {
     // Previous
     const isFirst = currentIndex === 0;
     const newIndex = isFirst ? bannerBooks.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
-
+//
   const goToNext = () => {
     const isLast = currentIndex === bannerBooks.length - 1;
     const newIndex = isLast ? 0 : currentIndex + 1;
@@ -61,7 +62,7 @@ function Banner() {
           ›
         </button>
 
-        {'/* Dots điều khiển */'}
+        {/* Dots điều khiển */}
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
           {bannerBooks.map((_, index) => (
             <button
