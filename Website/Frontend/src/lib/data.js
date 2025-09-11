@@ -2,6 +2,9 @@ import sach1 from "../assets/sach1.webp";
 import sach2 from "../assets/sach2.webp";
 import sach3 from "../assets/sach3.webp";
 import sach4 from "../assets/sach4.webp";
+
+import sach5 from "../assets/sach4.webp";
+import avatar from "../assets/avatar.jpg";
 export const bannerBooks = [
   {
     id: 9,
@@ -34,61 +37,66 @@ export const bannerBooks = [
       "https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
-export const products = [
+export const sanphammoi = [
   {
     maSP: 1,
     tenSP: "Doraemon - Tập 1",
     gia: 100000,
-    giaGiam: 80000,
+    giaGiam: 40000,
     hinhAnh: sach1,
+    category: "kinh dị",
   },
   {
     maSP: 2,
     tenSP: "Thần Đồng Đất Phương Nam",
     gia: 200000,
-    giaGiam: 80000,
+    giaGiam: 10000,
     hinhAnh: sach2,
   },
   {
     maSP: 3,
     tenSP: "Truyện Tranh Doremon",
     gia: 300000,
-    giaGiam: 80000,
+    giaGiam: 300000,
     hinhAnh: sach3,
   },
   {
     maSP: 4,
     tenSP: "Thám Tử Lừng Danh Conan",
-    gia: 300000,
-    giaGiam: 80000,
+    gia: 400000,
+    giaGiam: 300000,
     hinhAnh: sach4,
   },
+];
+
+export const sanphambanchay = [
   {
     maSP: 1,
     tenSP: "Doraemon - Tập 1",
     gia: 100000,
     giaGiam: 80000,
-    hinhAnh: sach1,
+    hinhAnh: avatar,
   },
   {
     maSP: 2,
     tenSP: "Thần Đồng Đất Phương Nam",
     gia: 200000,
     giaGiam: 80000,
-    hinhAnh: sach2,
+    hinhAnh: sach5,
   },
   {
     maSP: 3,
     tenSP: "Truyện Tranh Doremon",
     gia: 300000,
-    giaGiam: 80000,
+    giaGiam: 120000,
     hinhAnh: sach3,
   },
   {
     maSP: 4,
     tenSP: "Thám Tử Lừng Danh Conan",
     gia: 300000,
-    giaGiam: 80000,
+    giaGiam: 30000,
     hinhAnh: sach4,
+    category: "Truyện tranh",
   },
 ];
