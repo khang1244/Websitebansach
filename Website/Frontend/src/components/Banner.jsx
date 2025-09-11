@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { bannerBooks } from "../lib/data";
+import { CiSearch } from "react-icons/ci";
+import avatar from "../assets/avatar.jpg";
 
 function Banner() {
   const [currentIndex, setCurrentIndex] = useState(0); // Hook của React
@@ -19,7 +21,7 @@ function Banner() {
     const newIndex = isFirst ? bannerBooks.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
-//
+// chuyển về slide phía sau
   const goToNext = () => {
     const isLast = currentIndex === bannerBooks.length - 1;
     const newIndex = isLast ? 0 : currentIndex + 1;
@@ -27,8 +29,30 @@ function Banner() {
   };
 
   return (
-        <div className=" relative w-full overflow-hidden">
-        {/* Slides */}
+    <div className="w-full px-5">
+      {/* tìm kiếm */}
+      <div className="flex justify-between items-center px-10 py-5.5 bg-[#2c51d7] text-white">
+        <div className="flex items-center gap-3">
+          <div className="w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-white">
+            {/* Avatar */}
+            <img src={avatar} alt="avatar" />
+          </div>
+          <div>
+            {/* Tên người dùng */}
+            <p className="text-white font-semibold">Lê Hoàng Khang</p>
+            <p className="text-sm text-gray-50">Xin chào!</p>
+          </div>
+        </div>
+        <div className="w-1/2 relative">
+          {/* Thanh tìm kiếm */}
+          <input type="text" placeholder="Nhập tìm kiếm" className="w-full rounded-full bg-white outline-none p-2 text-black px-4" />
+          <div className="absolute top-2.5 right-4 text-black text-xl font-extrabold"> 
+            <CiSearch />
+          </div>
+        </div>
+      </div>
+      <div className=" relative w-full overflow-hidden">
+         {/* Slides */}
         <div
             className="flex transition-transform ease-in-out duration-700"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -74,6 +98,7 @@ function Banner() {
             ></button>
           ))}
         </div>
+     </div>
       </div>
     
   );

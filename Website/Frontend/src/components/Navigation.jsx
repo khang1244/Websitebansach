@@ -1,11 +1,11 @@
-import logo from "../assets/Red Panda.png";
+import logo from "../assets/avatar.jpg";
 import { FaShoppingCart } from "react-icons/fa";
 function Navigation() {
   return (
-    <nav className="px-6 py-6 flex justify-between items-center bg-[#00809D] text-white">
+    <nav className="px-6 py-6 flex justify-between items-center bg-[#2c51d7] text-white border-b-[1px] border-b-[#005B73] ">
       <div className="flex items-center space-x-12">
         <div>
-          <img src={logo} alt="logo" className="h-8" />
+          <img src={logo} alt="logo" className="h-12 w-12 rounded-full" />
         </div>
         <ul className="flex space-x-4 justify-end items-center font-semibold">
           <li>Trang Chủ</li>
